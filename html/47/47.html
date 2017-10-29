@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+	svg#chart{
+		background: lightgray;
+	}
+
+    #chart circle{
+        fill: lightblue;
+    }
+
+    #chart line {
+        stroke: #555555;
+        stroke-width: 2px;
+    }
+
+    #chart rect {
+        stroke: red;
+        fill: white;
+    }
+
+    #chart polygon{
+        fill: green;
+    }
+
+    #chart line{
+        fill: black;
+    }
+
+    #chart text{
+        fill: black;
+        font-size: 16px;
+    }
+
+    #chart text#title{
+        font-size: 18px;
+    }
+
+    #chart{
+        background: #eee;
+        font-family: sans-serif;
+    }
+
+    #chart path {
+        stroke: red;
+        fill: none;
+    }
+
+    /*#chart circle{*/
+        /*opacity: 0.33;*/
+    /*}*/
+
+</style>
+
+
+<body>
+	<svg id="chart" width="500" height="500">
+        <circle r="15" cx="100" cy="50"></circle>
+        <line x1="20" y1="20" x2="20" y2="130"></line>
+        <line x1="20" y1="130" x2="20" y2="130"></line>
+        <rect x="240" y="5" width="55" height="30"></rect>
+        <polygon points="210,100, 230,100, 220, 80"></polygon>
+        <text id="title" text-anchor="end" x="20" y="20"
+              transform="rotate(-90, 20, 20)" dy="0.80em">
+            y axis label
+        </text>
+        <path d="M20 130L60 70L110 100L160 45" ></path>
+
+        <!--<rect x="0" y="0" width="100" height="20"-->
+            <!--transform="scale(0.5), translate(100,100), rotate(45) "></rect>-->
+        <g id="shapes" transform="translate(50, 300)">
+            <circle cs="50" cy="0" r="25" fill="red" ></circle>
+            <rect x="30" y="10" width="40" height="20" fill="blue"></rect>
+            <path d="M-20 -10L50 -10L10 60Z" fill="green"></path>
+            <circle r="10" fill="yellow"></circle>
+        </g>
+
+        <g transform="translate(200, 200)">
+            <circle cx="0" cy="-20" r="30" fill="red" style="opacity: 0.33; fill:red;"></circle>
+            <circle cx="17.3" cy="10" r="30" fill="green" style="opacity: 0.33; fill:green;"></circle>
+            <circle cx="-17.3" cy="10" r="30" fill="blue" style="opacity: 0.33; fill:blue;"></circle>
+        </g>
+
+        <g id="circles" transform="translate(100, 100)">
+
+        </g>
+	</svg>
+    <!--<script src="../../js/lib/d3.v3.js"></script>-->
+    <script src="./d3.v3.js"></script>
+    <script src="./script.js"></script>
+
+</body>
